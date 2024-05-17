@@ -46,39 +46,25 @@ This project is a Django application for translating and dubbing YouTube videos 
     pip install -r requirements.txt
     ```
 
-4. **Create a `.env` file in the root directory and add the following variables**:
-
-    ```plaintext
-    DEEPL_API_KEY=your_deepL_key
-    SECRET_KEY=your_django_secret_key
-    DEBUG=True
-    DATABASE_NAME=your_database_name
-    DATABASE_USER=your_database_user
-    DATABASE_PASSWORD=your_database_password
-    DATABASE_HOST=your_database_host
-    DATABASE_PORT=your_database_port
-    ALLOWED_HOSTS=127.0.0.1,localhost
-    ```
-
-5. **Apply database migrations**:
+4. **Apply database migrations**:
 
     ```bash
     python manage.py migrate
     ```
 
-6. **Create a superuser for the Django admin**:
+5. **Create a superuser for the Django admin**:
 
     ```bash
     python manage.py createsuperuser
     ```
 
-7. **Run the development server**:
+6. **Run the development server**:
 
     ```bash
     python manage.py runserver
     ```
 
-8. **Open your browser and go to `http://127.0.0.1:8000/translate/` to use the application**.
+7. **Open your browser and go to `http://127.0.0.1:8000/translate/` to use the application**.
 
 ## Usage
 
