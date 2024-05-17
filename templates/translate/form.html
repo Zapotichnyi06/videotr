@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Translation Form</title>
+</head>
+<body>
+    <h1>Translate and Dub Video</h1>
+    <form action="{% url 'process_video_view' %}" method="get">
+        <label for="url">YouTube Video URL:</label>
+        <input type="text" id="url" name="url" required>
+        <button type="submit">Submit</button>
+    </form>
+    {% if output %}
+        <h2>Translated Video:</h2>
+        <video controls>
+            <source src="{{ output }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    {% endif %}
+    {% if error %}
+        <p>Error: {{ error }}</p>
+    {% endif %}
+</body>
+</html>
